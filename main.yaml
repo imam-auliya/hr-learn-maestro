@@ -1,0 +1,17 @@
+appId: com.padma.mobile
+env: 
+    USERNAME: test1
+    PASSWORD: Test123!
+---
+- launchApp
+- runFlow:
+    when:
+      visible: "Allow Padma to send you notifications?"
+    file: onboard/check-permission.yaml
+- runFlow:
+    when:
+      visible:
+    file: onboard/step-onboarding.yaml
+- runFlow:
+    file: login/login.yaml
+

@@ -1,0 +1,8 @@
+appId: com.padma.mobile
+---
+- runFlow:
+    when:
+      visible: "Allow Padma to send you notifications?"
+    commands:
+      - tapOn:
+          id: "com.android.permissioncontroller:id/permission_allow_button"

@@ -1,0 +1,12 @@
+appId: com.padma.mobile
+---
+- repeat:
+    while:
+      visible: "Next"
+    commands: 
+      - tapOn: "Next"
+- runFlow:
+    when:
+      visible: "Explore as a guest"
+    commands:
+      - tapOn: "Explore as a guest"
