@@ -5,7 +5,7 @@ name: "LOGIN STAGING"
 env: 
     USERNAME: auliya77@gmail.com
     PASSWORD: Test123!
-    USER_NAME: 
+    # USER_NAME: 
 ---
 - launchApp
 - tapOn:

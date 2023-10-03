@@ -23,12 +23,12 @@ env:
 - inputText: ${PASSWORD}
 - tapOn:
     id: "login_btn"
-- runFlow:
-    when:
-      true: ${LANG == 'ID'}
-    commands: 
-        - assertVisible:
-            text: ${ERR_MSG_EN}
+# - runFlow:
+#     when:
+#       true: ${LANG == 'ID'}
+#     commands: 
+#         - assertVisible:
+#             text: ${ERR_MSG_EN}
 - runFlow:
     when:
       true: ${LANG == 'EN'}

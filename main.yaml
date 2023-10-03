@@ -1,5 +1,6 @@
 appId: com.padma.mobile
 ---
+- clearState: com.padma.mobile
 - launchApp
 # - startRecording: test-record
 - runFlow:
@@ -12,8 +13,8 @@ appId: com.padma.mobile
     file: onboard/step-onboarding.yaml
 - runFlow:
     file: auth/fail-login.yaml
-# - runFlow:
-#     file: auth/login.yaml
+- runFlow:
+    file: auth/login.yaml
 # - runFlow:
 #     file: booking/create-booking.yaml
 - runFlow:

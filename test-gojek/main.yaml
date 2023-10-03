@@ -1,0 +1,6 @@
+appId: com.gojek.app
+---
+- clearState: com.gojek.app
+- launchApp
+- runFlow:
+    file: onboard/check-language.yaml

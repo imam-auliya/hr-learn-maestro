@@ -1,0 +1,64 @@
+appId: com.gojek.app
+env:
+    EN: English
+    ID: Bahasa Indonesia
+    VT: Tiếng Việt
+    TITLE_EN: Choose your app language
+    SUBTITLE_EN: Which language do you prefer?
+    TITLE_ID: Pilihan bahasa
+    SUBTITLE_ID: Mau pakai bahasa apa?
+    TITLE_VT: Thay đổi ngôn ngữ
+    SUBTITLE_VT1: Bạn muốn sử dụng ngôn ngữ nào?
+    SUBTITLE_VT: Bạn muốn dùng ngôn ngữ nào?
+
+
+---
+- runFlow:
+    when:
+        notVisible:
+            id: "com.gojek.app:id/txt_change_language_title"
+    commands:
+        - tapOn:
+            id: "com.gojek.app:id/pill_language_picker"
+- tapOn:
+    id: "com.gojek.app:id/txt_country_name"
+    index: 0
+- assertVisible: ${TITLE_EN}
+# - assertVisible: ${SUBTITLE_EN}
+- tapOn:
+    id: "com.gojek.app:id/txt_country_name"
+    index: 1
+- assertVisible: ${SUBTITLE_ID}
+# - assertVisible: ${SUBTITLE_ID}
+- tapOn:
+    id: "com.gojek.app:id/txt_country_name"
+    index: 2
+# - assertVisible: ${TITLE_VT}
+- assertVisible: ${SUBTITLE_VT}
+- runFlow:
+    when:
+        true: ${LANG == 'EN'}
+    commands:
+        - tapOn:
+            id: "com.gojek.app:id/txt_country_name"
+            index: 0
+- runFlow:
+    when:
+        true: ${LANG == 'ID'}
+    commands:
+        - tapOn:
+            id: "com.gojek.app:id/txt_country_name"
+            index: 1
+- runFlow:
+    when:
+        true: ${LANG == 'VT'}
+    commands:
+        - tapOn:
+            id: "com.gojek.app:id/txt_country_name"
+            index: 2
+- tapOn:
+    id: "com.gojek.app:id/ll_button_container"
+    index: 2
+- tapOn:
+    id: "com.gojek.app:id/ll_button_container"
+    index: 0
