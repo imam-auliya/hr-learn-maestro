@@ -1,0 +1,6 @@
+flows:
+  - auth/*
+  - profile/*
+  - booking/*
+
+excludeTags:

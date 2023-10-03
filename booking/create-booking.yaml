@@ -1,0 +1,15 @@
+appId: com.padma.mobile
+---
+- launchApp
+- tapOn: " Choose hotel" #Select property
+- tapOn:
+    point: "50%,22%" #Pick first item from the list
+- tapOn:
+    point: "50%,43%" #Open date picker
+- tapOn:
+    point: "21%,54%" #Select Checkin date
+- tapOn:
+    point: "79%,54%" #Select Checkout date
+- tapOn: "Done"
+- tapOn: "Room & Guest"
+

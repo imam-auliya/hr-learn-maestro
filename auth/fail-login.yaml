@@ -1,0 +1,40 @@
+appId: com.padma.mobile
+tags:
+  - dev
+  - staging
+  - negative-case
+  - indo
+name: "FAIL LOGIN"
+env: 
+    USERNAME: xxx
+    PASSWORD: xxxxxxxxx
+
+    ERR_MSG_EN: 'Incorrect email/username or password'
+    ERR_MSG_ID: 'email/username atau password salah'
+---
+- tapOn:
+    id: "login_guest_button"
+- tapOn:
+    id: "email_input"
+- inputText: ${USERNAME}
+- back
+- tapOn:
+    id: "password_input"
+- inputText: ${PASSWORD}
+- tapOn:
+    id: "login_btn"
+- runFlow:
+    when:
+      true: ${LANG == 'ID'}
+    commands: 
+        - assertVisible:
+            text: ${ERR_MSG_EN}
+- runFlow:
+    when:
+      true: ${LANG == 'EN'}
+    commands: 
+        - assertVisible:
+            text: ${ERR_MSG_EN}
+
+# - assertVisible:
+#     text: "Incorrect email/username or password"

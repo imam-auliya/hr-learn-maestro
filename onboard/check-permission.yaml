@@ -1,4 +1,7 @@
 appId: com.padma.mobile
+tags:
+  - notif-permission
+name: "CHECK NOTIF PERMISSION"
 ---
 - runFlow:
     when:

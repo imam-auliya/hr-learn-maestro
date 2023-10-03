@@ -1,0 +1,23 @@
+appId: com.padma.mobile
+tags: 
+    - dev
+name: "LOGIN STAGING"
+env: 
+    USERNAME: auliya77@gmail.com
+    PASSWORD: Test123!
+    USER_NAME: 
+---
+- launchApp
+- tapOn:
+    id: "login_guest_button"
+- tapOn:
+    id: "email_input"
+- inputText: ${USERNAME}
+- back
+- tapOn:
+    id: "password_input"
+- inputText: ${PASSWORD}
+- tapOn:
+    id: "login_btn"
+- tapOn:
+    point: "88%,94%" #TAP PROFILE TAB

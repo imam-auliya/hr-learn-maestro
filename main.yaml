@@ -1,9 +1,7 @@
 appId: com.padma.mobile
-env: 
-    USERNAME: test1
-    PASSWORD: Test123!
 ---
 - launchApp
+# - startRecording: test-record
 - runFlow:
     when:
       visible: "Allow Padma to send you notifications?"
@@ -13,5 +11,11 @@ env:
       visible:
     file: onboard/step-onboarding.yaml
 - runFlow:
-    file: login/login.yaml
-
+    file: auth/fail-login.yaml
+# - runFlow:
+#     file: auth/login.yaml
+# - runFlow:
+#     file: booking/create-booking.yaml
+- runFlow:
+    file: auth/logout-home.yaml
+# - stopRecording

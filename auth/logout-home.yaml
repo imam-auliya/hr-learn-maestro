@@ -1,0 +1,14 @@
+appId: com.padma.mobile
+name: "LOG OUT FROM HOME"
+tags:
+    - dev
+    - staging
+---
+- tapOn:
+    point: "88%,94%"
+- tapOn: "Log out"
+- tapOn:
+    text: "Log out"
+    index: 1
+- takeScreenshot: "user_logged_out"
+

@@ -9,4 +9,5 @@ appId: com.padma.mobile
     when:
       visible: "Explore as a guest"
     commands:
+      - takeScreenshot: onboarding_success
       - tapOn: "Explore as a guest"
